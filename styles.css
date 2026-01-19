@@ -1,0 +1,321 @@
+/* CTDP Plugin Styles - v9 Polished Settings UI */
+
+.ctdp-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--background-primary);
+    font-family: var(--font-interface);
+}
+
+/* --- Top Bar (Nav) --- */
+.ctdp-nav {
+    display: flex;
+    align-items: center;
+    padding: 6px 15px; 
+    border-bottom: 1px solid transparent; 
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.ctdp-task-select {
+    flex-grow: 1;
+}
+
+.ctdp-nav-icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.ctdp-nav-icon-btn:hover {
+    color: var(--text-normal);
+    background-color: var(--background-modifier-hover);
+}
+
+/* --- Content Area (Vertical Stack) --- */
+.ctdp-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px; 
+    gap: 15px; 
+}
+
+/* --- Top Section: Timer & Controls --- */
+.ctdp-top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* --- Circular Timer --- */
+.ctdp-timer-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctdp-progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.ctdp-timer-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ctdp-timer-time {
+    font-size: 2.8em;
+    font-family: var(--font-monospace);
+    font-weight: bold;
+    color: var(--text-normal);
+    line-height: 1;
+}
+
+.ctdp-timer-state {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+/* --- Controls (Icon Only) --- */
+.ctdp-controls-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ctdp-btn-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    color: var(--text-on-accent);
+}
+
+.ctdp-btn-icon svg { width: 26px; height: 26px; }
+.ctdp-btn-icon:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.ctdp-btn-icon:active { transform: translateY(0); }
+
+.ctdp-btn-start { background-color: var(--interactive-accent); }
+.ctdp-btn-start:hover { background-color: var(--interactive-accent-hover); }
+.ctdp-btn-secondary { background-color: var(--background-modifier-border); color: var(--text-normal); }
+.ctdp-btn-secondary:hover { background-color: var(--background-modifier-border-hover); }
+.ctdp-btn-danger { background-color: var(--background-primary); border: 2px solid var(--text-error); color: var(--text-error); box-shadow: none; }
+.ctdp-btn-danger:hover { background-color: var(--text-error); color: var(--text-on-accent); }
+
+/* --- Stats Row (Symmetrical) --- */
+.ctdp-stats-row {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    gap: 40px;
+    margin-top: 5px;
+}
+
+.ctdp-stat-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Side Stats (Aux & Prec) */
+.ctdp-side-stat .ctdp-stat-val {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--text-muted);
+    line-height: 1;
+}
+.ctdp-side-stat .ctdp-stat-lbl {
+    font-size: 0.7em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Main Hero Stat (Center) */
+.ctdp-main-stat .ctdp-stat-val {
+    font-size: 5em; 
+    font-weight: 800;
+    line-height: 0.9;
+    color: var(--interactive-accent);
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 15px rgba(var(--interactive-accent-rgb), 0.1);
+}
+.ctdp-main-stat .ctdp-stat-lbl {
+    font-size: 0.85em;
+    color: var(--text-normal);
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* --- Settings Page --- */
+.ctdp-setting-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.ctdp-setting-header-text {
+    margin: 0 !important;
+    text-align: left !important;
+    flex-grow: 1;
+}
+
+.ctdp-settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding-bottom: 10px;
+}
+
+.ctdp-task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.ctdp-task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.ctdp-task-header-row { display: flex; align-items: baseline; gap: 10px; }
+.ctdp-task-name { font-weight: bold; font-size: 1.1em; color: var(--text-normal); }
+.ctdp-task-desc { font-size: 0.85em; color: var(--text-muted); }
+.ctdp-task-stats { font-size: 0.8em; color: var(--text-faint); font-family: var(--font-monospace); margin-top: 4px; }
+
+.ctdp-task-actions { display: flex; gap: 5px; }
+.ctdp-icon-action {
+    background: transparent; border: none; cursor: pointer; opacity: 0.7; padding: 6px; border-radius: 4px; color: var(--text-muted);
+}
+.ctdp-icon-action:hover { opacity: 1; background-color: var(--background-modifier-hover); color: var(--text-normal); }
+
+button.ctdp-icon-delete {
+    color: var(--text-error) !important;
+    opacity: 1 !important;
+}
+button.ctdp-icon-delete:hover {
+    background-color: var(--background-modifier-error-hover) !important;
+}
+
+/* --- Modal: Precedent Management (Settings Edit) --- */
+.ctdp-precedent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.ctdp-precedent-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: var(--background-primary-alt);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.ctdp-precedent-row:hover {
+    background-color: var(--background-secondary);
+}
+
+.ctdp-precedent-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ctdp-precedent-row-name {
+    font-weight: 600;
+    color: var(--text-normal);
+}
+
+.ctdp-precedent-row-meta {
+    font-size: 0.8em;
+    color: var(--text-muted);
+}
+
+/* --- Modal: Precedent Selection (Pause) --- */
+.ctdp-precedent-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    margin-bottom: 20px;
+    padding: 2px;
+}
+
+.ctdp-precedent-item {
+    padding: 15px;
+    background-color: var(--background-secondary-alt);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ctdp-precedent-item:hover {
+    border-color: var(--interactive-accent);
+    background-color: var(--background-primary);
+}
+
+.ctdp-precedent-name { font-weight: 600; color: var(--text-normal); font-size: 1.05em; }
+.ctdp-precedent-meta { font-size: 0.85em; color: var(--text-muted); margin-top: 4px; }
+
+/* Modals */
+.ctdp-modal-center-controls { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+.ctdp-modal-center-text { text-align: center; }
